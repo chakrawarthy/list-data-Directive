@@ -1,0 +1,7 @@
+{
+    "justin":{"name":"Justin", "occupation":"Singer"},
+    "sherlock":{"name": "Sherlock", "occupation": "detective"},
+    "harvey":{"name":"Harvey Specter", "occupation": "lawyer"},
+    "mike":{"name":"mike", "occupation": "lawyer"},
+    "dexter":{"name":"dexter", "occupation": "consultant"}
+}

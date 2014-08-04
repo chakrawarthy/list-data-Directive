@@ -1,0 +1,29 @@
+body{
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+.container{
+    margin: 0 auto;
+    width: 1170px;
+}
+.header {
+    top: 0;
+    z-index: 9999;
+    height: 40px;
+    background: #222;
+    color: #fff;
+}
+.content {
+    margin: 20px;
+}
+h3 {
+    background: gray;
+    color: white;
+    padding-left: 10px;
+}
+div.example {
+    margin: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: none;
+}
