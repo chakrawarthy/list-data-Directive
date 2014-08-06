@@ -1,6 +1,8 @@
+(function(angular){
+
 //main application
 var app = angular.module('myApp', []);
-     
+    
 //app controller
 app.controller('MainController', function($scope){
     //data to be passed to the directive
@@ -51,14 +53,18 @@ app.directive('listData', function($http, $timeout){
 
             function loadDataFromUrl() {
                 $scope.isDataAvailable = false;
-                $http.get(dataSource)
-                .success(function(response){
-                    $scope.isDataAvailable = true;
-                    $scope.dataList = response;
-                })
-                .error(function(response){
-                    throw Error('Error: unable to fetch the data: '+response);
-                });
+                
+                //adding a timeout so the loader can be seen
+                $timeout(function(){
+                    $http.get(dataSource)
+                    .success(function(response){
+                        $scope.isDataAvailable = true;
+                        $scope.dataList = response;
+                    })
+                    .error(function(response){
+                        throw Error('Error: unable to fetch the data: '+response);
+                    });
+                }, 3000);
             }
 
             function loadDataFromObject() {
@@ -72,3 +78,5 @@ app.directive('listData', function($http, $timeout){
         }   
     }
 });
+
+})(angular);
